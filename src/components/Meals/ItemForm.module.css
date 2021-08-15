@@ -22,3 +22,19 @@
     padding: 8px 10px;
     cursor: pointer;
 }
+
+@media (max-width:600px) {
+    .label {
+        display: block;
+    }
+    
+    .input{
+        display: block;
+        margin: 5px auto 0;
+    }
+    .btn {
+        border-radius: 15px;
+        padding: 4px 5px;
+        margin:15px auto 0 ;
+    }
+}
