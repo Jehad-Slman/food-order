@@ -43,7 +43,7 @@
 }
 
 @media (max-width: 600px) {
-    .right{
-        border-left: 1px solid #8a2b06;
+    .total {
+        display:none
     }
 }
