@@ -1,0 +1,27 @@
+.btn {
+    background-color: rgba(0,0,0,.5);
+    padding: 15px 40px;
+    border-radius: 25px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+
+.btn span {
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.num {
+    background-color: #8a2b06;
+    border-radius: 50%;
+}
+
+@media (max-width : 600px) {
+    .btn {
+        padding: 10px 20px;
+    }
+}

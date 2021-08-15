@@ -1,0 +1,49 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 2px solid #8a2b06;
+    padding: 10px 0;
+}
+
+
+
+.name {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.price{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #8a2b06;
+}
+
+.amount {
+    border: 1px solid #ccc;
+    margin-left: 15px;
+    padding: 0 5px;
+}
+
+.total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8a2b06;
+}
+
+.btn {
+    background: none;
+    font-size: 1.3rem;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .right{
+        border-left: 1px solid #8a2b06;
+    }
+}

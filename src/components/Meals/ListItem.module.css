@@ -1,0 +1,29 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+.item div span {
+    display: block;
+    text-align: left;
+}
+
+.name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.description {
+    color: #232323;
+    font-style: italic;
+}
+
+.price{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #8a2b06;
+}

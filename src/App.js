@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react';
+import Header from "./components/Layout/Header";
+import MealList from "./components/Meals/MealList";
+import Cart from "./components/Cart/Cart";
+import reactDom from "react-dom";
+import CartContextProvider from './store/CartContextProvider';
 
+import classes from './App.module.css';
 function App() {
+
+  const [showCart, setShowCart] = useState(false);
+
+  const showCartHandler = () => {
+    setShowCart(true);
+  }
+
+  const hideCartHandler = () => {
+    setShowCart(false);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <CartContextProvider>
+      <div className={classes.app}>
+        {showCart && reactDom.createPortal(<Cart 
+        onHideCart={hideCartHandler}
+        />,
+        document.getElementById('overlay'))}
+        <Header onShowCart={showCartHandler} />
+        <MealList />
+      </div>
+    </CartContextProvider>
+    )
 }
 
 export default App;
